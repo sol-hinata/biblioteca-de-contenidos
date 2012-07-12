@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Resultados";
+}
+<div id="content">
+<h1 align="center">RESULTADOS AQUI</h1>
+<div class="contacto">
+			 <h2>CURSOS</h2>
+@foreach (var item in @ViewBag.i) 
+{
+    @item.idPublicacion
+    @item.titulo
+    
+}
+<h2>TUTORIALES</h2>
+@foreach (var item in @ViewBag.t)
+{
+    @item.idPublicacion
+    @item.titulo
+}
+<h2>LIBROS</h2>
+@foreach (var item in @ViewBag.l)
+{
+    @item.idPublicacion
+    @item.titulo
+}
+<h2>CURSO</h2>
+@foreach (var item in @ViewBag.c)
+{
+    @item.idPublicacion
+    @item.titulo
+}
+</div>
+</div>

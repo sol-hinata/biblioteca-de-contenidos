@@ -1,0 +1,74 @@
+D:\PROYECTO FINAL\proyect\proyect\bin\proyect.dll
+D:\PROYECTO FINAL\proyect\proyect\bin\proyect.pdb
+D:\PROYECTO FINAL\proyect\proyect\bin\EntityFramework.dll
+D:\PROYECTO FINAL\proyect\proyect\bin\EntityFramework.xml
+D:\PROYECTO FINAL\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+D:\PROYECTO FINAL\proyect\proyect\obj\Debug\proyect.dll
+D:\PROYECTO FINAL\proyect\proyect\obj\Debug\proyect.pdb
+D:\PROYECTO FINAL\proyect\proyect\bin\BotDetect.dll
+D:\PROYECTO FINAL\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+D:\PROYECTOFINAL\proyect\proyect\bin\proyect.dll
+D:\PROYECTOFINAL\proyect\proyect\bin\proyect.pdb
+D:\PROYECTOFINAL\proyect\proyect\bin\BotDetect.dll
+D:\PROYECTOFINAL\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+D:\PROYECTOFINAL\proyect\proyect\bin\EntityFramework.dll
+D:\PROYECTOFINAL\proyect\proyect\bin\EntityFramework.xml
+D:\PROYECTOFINAL\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+D:\PROYECTOFINAL\proyect\proyect\obj\Debug\proyect.dll
+D:\PROYECTOFINAL\proyect\proyect\obj\Debug\proyect.pdb
+H:\sprint\proyect\proyect\bin\proyect.dll
+H:\sprint\proyect\proyect\bin\proyect.pdb
+H:\sprint\proyect\proyect\bin\BotDetect.dll
+H:\sprint\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+H:\sprint\proyect\proyect\bin\EntityFramework.dll
+H:\sprint\proyect\proyect\bin\EntityFramework.xml
+H:\sprint\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+H:\sprint\proyect\proyect\obj\Debug\proyect.dll
+H:\sprint\proyect\proyect\obj\Debug\proyect.pdb
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\proyect.dll
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\proyect.pdb
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\BotDetect.dll
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\EntityFramework.dll
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\bin\EntityFramework.xml
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\obj\Debug\proyect.dll
+C:\Users\Owner\Desktop\ULTIMOOO\proyect\proyect\obj\Debug\proyect.pdb
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\proyect.dll
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\proyect.pdb
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\BotDetect.dll
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\EntityFramework.dll
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\bin\EntityFramework.xml
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\obj\Debug\proyect.dll
+C:\Users\Owner\Documents\Visual Studio 2010\Projects\proyect\proyect\obj\Debug\proyect.pdb
+H:\BIBLIOTECA DE CONTENIDOS\repositorioultimo\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+H:\BIBLIOTECA DE CONTENIDOS\repositorioultimo\proyect\proyect\obj\Debug\proyect.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+C:\seminario\PROYECTO_FINAL\proyect\proyect\obj\Debug\proyect.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\proyect.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\proyect.pdb
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\BotDetect.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\EntityFramework.dll
+C:\seminario\PROYECTO_FINAL\proyect\proyect\bin\EntityFramework.xml
+C:\seminario\PROYECTO_FINAL\proyect\proyect\obj\Debug\proyect.pdb
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\proyect.dll
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\proyect.pdb
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\BotDetect.dll
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\EntityFramework.dll
+C:\seminario\BIBLIOTECA\proyect\proyect\bin\EntityFramework.xml
+C:\seminario\BIBLIOTECA\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+C:\seminario\BIBLIOTECA\proyect\proyect\obj\Debug\proyect.dll
+C:\seminario\BIBLIOTECA\proyect\proyect\obj\Debug\proyect.pdb
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\proyect.dll
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\proyect.pdb
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\BotDetect.dll
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\BotDetect.Web.UI.Mvc.dll
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\EntityFramework.dll
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\bin\EntityFramework.xml
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\obj\Debug\ResolveAssemblyReference.cache
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\obj\Debug\proyect.dll
+H:\BIBLIOTECA DE CONTENIDOS\BIBLIOTECA\proyect\proyect\obj\Debug\proyect.pdb

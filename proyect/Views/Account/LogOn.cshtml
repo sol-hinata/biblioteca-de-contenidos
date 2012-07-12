@@ -1,0 +1,69 @@
+﻿@model proyect.Models.LogOnModel
+@using BotDetect.Web.UI.Mvc;
+
+@{
+    ViewBag.Title = "Log On";
+}
+@* add BotDetect header includes *@
+@section BotDetectStyles {
+    <link href="@BotDetect.Web.CaptchaUrls.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" />
+    <link href="@BotDetect.Web.CaptchaUrls.SoundPackageWarningStyleUrl" rel="stylesheet" type="text/css" />
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+    <div id="registration">
+        @using (Html.BeginForm())
+        {
+            <h1 class="cursivebig">Log On</h1>
+            <p class="cursive">Porfavor ingrese su password. @Html.ActionLink("Registrate", "Register") si no tienes una cuenta.</p>
+            @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+            <fieldset>
+                    <p class="cursive">IngresarInformacion</p>
+                    <p>
+                        <div>
+                           @Html.LabelFor(m => m.UserName)
+                        </div>
+                    </p>
+                    <p>
+                        <div>
+                            @Html.TextBoxFor(m => m.UserName)
+                            @Html.ValidationMessageFor(m => m.UserName)
+                        </div>
+                    </p>
+                    <p>
+                        <div>
+                            @Html.LabelFor(m => m.Password)
+                        </div>
+                    </p>
+                    <p>
+                        <div>
+                            @Html.PasswordFor(m => m.Password)
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                    </p>
+                    <p>
+                        <div>
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                    </p>
+                    @* add Captcha validation controls to the protected actionView *@
+                    @{MvcCaptcha registrationCaptcha = CaptchaHelper.GetRegistrationCaptcha();}
+                    @if (Session["captcha"] != null && (int)Session["captcha"] >= 2 && !registrationCaptcha.IsSolved)
+                    {
+                        <div>
+                            @Html.LabelFor(m => m.CaptchaCode)
+                            @Html.Captcha(registrationCaptcha)
+                        </div>
+                        <div>
+                            @Html.TextBoxFor(m => m.CaptchaCode)
+                            @Html.ValidationMessageFor(m => m.CaptchaCode)
+                        </div>
+                    }
+                    <div>
+                        <input type="submit" value="Ingresar"/>
+                    </div>
+            </fieldset>
+         }
+    </div>

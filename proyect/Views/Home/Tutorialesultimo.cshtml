@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Tutorialesultimo";
+}
+<h2>Tutoriales recientes</h2>
+<h1 align="center">TUTORIALES</h1>
+     <div class="perfil">
+         @foreach (var itemt in @ViewBag.listatutorial)
+         {     
+             <div class="public">     
+                <h3>@Html.ActionLink("Leer mas..", "VTutorial", new { id = itemt.idPublicacion })  </h3>
+                   <h3>Publicado por: </h3><h2>@itemt.nombre</h2>
+                   @foreach (var ss in @itemt.archivo)
+                   {
+                         <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+          
+                   } 
+                   <h3>Detalle:</h3><h2> @Html.Raw(@itemt.detalle)</h2>
+            </div>
+         }
+     </div>

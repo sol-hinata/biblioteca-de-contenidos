@@ -1,0 +1,21 @@
+﻿@model proyect.Models.categoria
+
+@{
+    ViewBag.Title = "Categorias";
+}
+<div id="content">
+    <h1 align="center">MODERACION DE CATEGORIAS</h1>
+    <div class="contacto">
+     @foreach (var item in @ViewBag.lista)
+     { 
+         <li>
+               <h3>IdCategoria: @item.idCategoria </h3>
+                  
+                   <h3>Titulo: @item.nombre</h3>    
+         </li>
+         @Html.ActionLink("Publicar", "PublicarCategoria", new { idc = item.idCategoria})<br />
+         @Html.ActionLink("Borrar", "BorrarCategoria", new { idc = item.idCategoria })   
+         <hr />
+     }
+     </div>
+</div>

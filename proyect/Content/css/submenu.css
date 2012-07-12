@@ -1,0 +1,39 @@
+﻿#demoA { /* al div contenedor lo dimensionamos y centramos */
+    width: 290px;
+	padding: 25px 0 0;
+	float: right;
+  }
+  #demoA a { /* establecemos las propeidades de los enlaces o botones */
+    background-color: #456;
+    box-shadow: 0 0 4px #ABC inset;
+    display: block;
+    font-size: 16px;
+    height: 2em;
+    line-height: 2em;
+    margin: 1px 0;
+    padding-left: 20px;
+  }
+  #demoA a:hover {
+    box-shadow: 0 0 12px #ABC inset;
+    color: #EEE;
+  }
+  #demoA div { /* los contenidos */
+    overflow:hidden;
+    text-align: center;
+    /* cada cambio se realizará con un efecto animado ¨*/
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  #demoA div.visible {
+    /* el visible tiene borde y una cierta altura */
+    border: 1px solid #456;
+    height:auto;
+  }
+  #demoA div.novisible {
+    /* el oculto no tiene borde y su altura es cero */
+    border: 1px solid transparent;
+    height:0px;
+  }
+  

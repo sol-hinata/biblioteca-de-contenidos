@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div id="content">
+    <h1 align="center">ACTIVIDADES</h1>
+    <div class="contacto">
+
+    </div>       
+</div> 
+<div class="sidebar">
+        <ul>	
+            <form>
+                <input id="name" name="name" placeholder="Q? Buscar" required="" tabindex="1" type="text"></br>
+                <input name="submit" id="submit" tabindex="5" value="Buscar" type="submit">
+            </form>
+            <div id="demoA">
+                <a onclick="demoacordeon('primero');" href="javascript:void(0);">MODERADOR DE USUARIOS</a>
+                <div id="activo" class="visible">
+                    @Html.ActionLink("LISTAR USUARIOS", "ListarUsuario")
+                    @Html.ActionLink("BUSCAR USUARIO", "BuscarUsuario")  
+                    @Html.ActionLink("REPORTE DE USUARIOS ", "Reporte")  
+                    @Html.ActionLink("LISTA BANEADOS ", "listaBaneados")  
+                </div>
+                <a onclick="demoacordeon('segundo');" href="javascript:void(0);">CATEGORIAS</a>
+                <div id="segundo" class="novisible">
+                    <ul>
+                	    <a href="page.html">Static Text Page</a>
+                        <a href="#">A sub Link</a>
+                        <a href="#">Another link</a>
+                    </ul>
+                </div>
+                <a onclick="demoacordeon('tercero');" href="javascript:void(0);">BIENVENIDOS A NUESTRO BLOG</a>
+                <div id="tercero" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+                <a onclick="demoacordeon('cuarto');" href="javascript:void(0);">PREGUNTAS FRECUENTES</a>
+                <div id="cuarto" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+            </div>
+        </ul> 
+    </div>
+    <div class="clear"></div>
+    
+
+ 

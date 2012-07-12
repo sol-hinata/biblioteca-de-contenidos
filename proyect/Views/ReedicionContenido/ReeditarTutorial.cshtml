@@ -1,0 +1,32 @@
+﻿@model proyect.Models.Tutorial
+@{
+    ViewBag.Title = "ReeditarTutorial";
+}
+<div class="contacto">
+    <h1>ReeditarTutorial</h1>
+    @using (Html.BeginForm())
+    { 
+        <div class="show-label">
+            @Html.LabelFor(m => m.titulo)
+        </div>
+        <div class="show-field">
+            @Html.TextBoxFor(m => m.titulo)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model=>model.nombrecate)
+        </div>
+        <div class="editor-label">
+            @Html.TextBoxFor(model => model.nombrecate, new { @style= "width:200px"})
+            @Html.ValidationMessageFor(model=>model.nombrecate)
+        </div>
+        <div class="show-label">
+            @Html.LabelFor(m => m.detalle)
+        </div>
+        <div class="article-content">
+            @Html.EditorFor(m => m.detalle)
+        </div>
+        <p>
+            <input type="submit" value="Enviar"/>  
+        </p>
+    }
+</div

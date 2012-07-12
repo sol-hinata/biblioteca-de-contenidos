@@ -1,0 +1,69 @@
+﻿@model proyect.Models.Libro
+@{
+    ViewBag.Title = "Libro";
+}
+<div id="content">
+    <h1 class="cursivebig" align="center">SUBIR LIBRO</h1>
+    <div class="contacto">
+        @using (Html.BeginForm("Libro", "Publicacion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {  
+            @Html.ValidationSummary(true)
+            <h3> &#10004 INGRESAR DATOS DEL LIBRO</h3>
+            <h4>subir portada del libro:</h4><input name="uploadFile" type="file"/><br/>
+            <h4>subir libro:</h4><input name="libroFile" type="file"/>   
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Autor)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Autor)
+                @Html.ValidationMessageFor(model => model.Autor)
+            </div>
+            <div class="editor-label">
+                @Html.Label("Anio de publicacion")
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(x => x.Annio_pub, new[] 
+                {
+                    new SelectListItem() {Text = "2000"},
+                    new SelectListItem() {Text = "2001"},
+                    new SelectListItem() {Text = "2002"},
+                    new SelectListItem() {Text = "2003"},
+                    new SelectListItem() {Text = "2004"},
+                    new SelectListItem() {Text = "2005"},
+                    new SelectListItem() {Text = "2006"},
+                    new SelectListItem() {Text = "2007"},
+                    new SelectListItem() {Text = "2008"},
+                    new SelectListItem() {Text = "2009"},
+                    new SelectListItem() {Text = "2010"},
+                    new SelectListItem() {Text = "2011"},
+                    new SelectListItem() {Text = "2012"}
+                }, "Elegir un Annio")
+                @Html.ValidationMessageFor(model => model.Annio_pub)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.titulo)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.titulo)
+                @Html.ValidationMessageFor(model => model.titulo)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.nombrecate)
+            </div>
+            <div class="editor-label">
+                @Html.TextBoxFor(model => model.nombrecate)
+                @Html.ValidationMessageFor(model => model.nombrecate)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.detalle)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.detalle)
+                @Html.ValidationMessageFor(model => model.detalle)
+            </div>
+            <p> 
+                <input type="submit" value="Subir Libro"/>
+            </p>
+        }
+    </div>
+</div>

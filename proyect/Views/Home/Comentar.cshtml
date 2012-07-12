@@ -1,0 +1,23 @@
+﻿@model proyect.Models.Comentario
+
+@{
+    ViewBag.Title = "Comentar";
+}
+
+<h2>Comentar</h2>
+@using (Html.BeginForm())
+         { 
+            <fieldset>
+             <legend>Ingresa tu Comentario</legend>
+                     <div class="editor-label">
+                        @Html.LabelFor(model => model.Descripcion)
+                     </div>
+                     <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Descripcion)
+                        @Html.ValidationMessageFor(model => model.Descripcion)
+                    </div>
+                    <p>
+                        <input type="submit" value="Comentar"/>
+                    </p> 
+             </fieldset>    
+           }      

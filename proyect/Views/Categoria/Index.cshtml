@@ -1,0 +1,14 @@
+﻿@model IEnumerable<proyect.Models.Categoria>
+@{
+    ViewBag.Title = "Index";
+}
+<div id="content">
+<h1 align="center">RESULTADOS AQUI</h1>
+<div class="contacto">
+<p> @Model.Count() Categoria:</p>    
+ @foreach (var cate in Model)
+     {
+      <li>@Html.ActionLink(cate.nombre, "Resultados", new { cate=cate.nombre   })</li>
+     }
+</div>
+</div>

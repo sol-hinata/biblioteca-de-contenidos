@@ -1,0 +1,984 @@
+﻿/*aumentado por taty*/
+/*contenedores*/
+
+#content {
+    float: left;
+	width:1000px;
+	padding:10px 0px 10px;
+}
+#content h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+
+.box { 
+	margin: 0;
+	padding: 0 5px;
+}
+
+/*para ponerlo como submenu*/
+.sidebar {
+	width: 300px;
+	padding: 5px 5px 5px;
+	float: right;
+	font-family:Times New Roman;
+	font-size:20px;
+	color:Black;
+	background-color: #E6E6FA;
+	border-radius: 10px;
+}
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar ul li {
+	margin-bottom: 20px;
+	line-height: 1.9em;
+}
+
+.sidebar li ul {
+	padding: 10px;
+	background-color: #e0e0e0;
+}
+
+.sidebar li ul li {
+	display: block;
+	border-top: none;
+	padding: 6px 2px;
+	margin: 0;
+	line-height: 1.5em;
+	font-size: 13px;
+	border: none;
+}
+
+.sidebar li ul li a {
+	font-weight: normal;
+	color: #666;
+}
+
+.sidebar li ul li a:hover {
+	color: #04427B;
+}
+
+.sidebar li ul.blocklist {
+	padding: 0;
+}
+
+.sidebar li ul.blocklist li {
+	padding: 0;
+	display: inline;
+}
+
+.sidebar li ul.blocklist li a {
+	display: block;
+	border-bottom:1px solid #e0e0e0;
+	padding: 8px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.sidebar li ul.blocklist li a:hover {
+	background-color: #ccc;
+	color: #111;
+}
+.sidebar h4  {
+	color: #fff;
+	font-family: Lucida, "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 13px;
+	letter-spacing: -0.5px;
+	border-bottom: 1px solid #02213B;
+	text-transform:uppercase;
+	margin: 0;
+	line-height: 1.9em;
+	padding: 5px 5px 5px 10px;
+	font-weight: bold;
+	background: #333 url('images/h4-bg.png') repeat-x center;
+}
+
+
+/*para ponerlo como submenu a la izquierda*/
+.sidebariz {
+	width: 300px;
+	padding: 5px 5px 5px;
+	float: left;
+	font-family:Times New Roman;
+	font-size:20px;
+	color:Black;
+	background-color: #E6E6FA;
+	border-radius: 10px;
+}
+
+.sidebariz ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebariz ul li {
+	margin-bottom: 20px;
+	line-height: 1.9em;
+}
+
+.sidebariz li ul {
+	padding: 10px;
+	background-color: #e0e0e0;
+}
+
+.sidebariz li ul li {
+	display: block;
+	border-top: none;
+	padding: 6px 2px;
+	margin: 0;
+	line-height: 1.5em;
+	font-size: 13px;
+	border: none;
+}
+
+.sidebariz li ul li a {
+	font-weight: normal;
+	color: #666;
+}
+
+.sidebariz li ul li a:hover {
+	color: #04427B;
+}
+
+.sidebariz li ul.blocklist {
+	padding: 0;
+}
+
+.sidebariz li ul.blocklist li {
+	padding: 0;
+	display: inline;
+}
+
+.sidebariz li ul.blocklist li a {
+	display: block;
+	border-bottom:1px solid #e0e0e0;
+	padding: 8px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.sidebariz li ul.blocklist li a:hover {
+	background-color: #ccc;
+	color: #111;
+}
+.sidebariz h4  {
+	color: #fff;
+	font-family: Lucida, "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 13px;
+	letter-spacing: -0.5px;
+	border-bottom: 1px solid #02213B;
+	text-transform:uppercase;
+	margin: 0;
+	line-height: 1.9em;
+	padding: 5px 5px 5px 10px;
+	font-weight: bold;
+	background: #333 url('images/h4-bg.png') repeat-x center;
+}
+
+
+
+/*para los botones*/
+
+.button {
+	background: #043b34;
+	background: -webkit-gradient(linear, left top, left bottom, from(#18abf0), to(#043b34));
+	background: -webkit-linear-gradient(top, #18abf0, #043b34);
+	background: -moz-linear-gradient(top, #18abf0, #043b34);
+	background: -ms-linear-gradient(top, #18abf0, #043b34);
+	background: -o-linear-gradient(top, #18abf0, #043b34);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: white;
+	font-size: 11px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+	float: right;
+	height: 20px;
+	width: 70px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	line-height: 20px;
+	text-align: center;
+   }
+.button:hover {
+   border-top-color: #0771b3;
+   background: #0771b3;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #db0d8c;
+   background: #db0d8c;
+   
+   }
+.button   a:hover      {
+	color: #DD0000;
+}
+/**detalle de actividades*/
+.actividad{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 45px 45px 45px;
+    margin-top: 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:300pxs;
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+    background: rgba(0,0,0,0.5);
+    float:right;
+}
+.actividad img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+	float:left;
+}
+.actividad div{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.actividad h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+
+
+/*detalle de comentario*/
+.coment{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 45px 45px 45px;
+    margin-top: 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:650px;
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+    background: rgba(0,0,0,0.5);
+    float:right;
+}
+.coment img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+	float:left;
+}
+.coment div{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.coment h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+
+/*publicacion*/
+.public{
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 5px 5px 5px;
+    margin:auto;
+    background: #E5E5E5;
+    box-shadow: 0px 5px 1px #B5C1C5, 0 0 0 5px #EEF5F7 inset;
+    height:300px;
+    width:925px;
+    position:relative;
+    background: rgba(0,0,0,0.5);
+}
+.public img {
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	margin: 0 0 10px 0;
+	width:auto;
+}
+.public h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.public h2
+{
+    font-size: 15px;
+    font-family:Times New Roman; 
+    color: #000000;
+}
+.public h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+
+/*moderador el blanco de tablas*/
+.moderador{
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 5px 5px 5px;
+    margin:auto;
+    background: #4587bhn;
+    box-shadow: 0px 5px 1px #B5C1C5, 0 0 0 5px #EEF5F7 inset;
+    height:auto;
+    width:auto;
+    position:relative;
+}
+.moderador img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+}
+
+/*moderacion*/
+.moderacion{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 45px 45px 45px;
+    margin-top: 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:825px;
+    font-size: 14px;
+    font-family: "Homer Simpson", cursive; 
+}
+.moderacion h1
+{
+    color:#00ff00;
+    }
+.moderacion img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+}
+
+
+/* para reedicion   es el mas largo pendi*/
+.reedicion{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 45px 45px 45px;
+    margin-top: 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:950px;
+    /*background: #444;*/
+    background: rgba(0,0,0,0.5);
+}
+.reedicion img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+}
+.reedicion h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.reedicion h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+    
+
+/*perfil*/
+.perfil{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 20px 20px 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:990px;
+    background: rgba(0,0,0,0.5);
+}
+.perfil img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+	font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.perfil div{
+font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.perfil h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.perfil h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+.perfil label{
+    display: block; /* esto es para que el label se sobreponga a la caja de texto */
+    font-weight: bold;
+}
+.perfil div{
+    margin-bottom: 15px; /* esto los separara un poco */
+}
+
+.perfil input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 300px; /* una longitud definida */
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.perfil input[type='text']:focus, .contacto textarea:focus{
+    outline: none; /* reset especifico para Chrome/Safari */
+    box-shadow:0 0 0 3px #dde9ec;
+}
+
+.perfil input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+.perfil input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+}
+.perfil input[type='submit']:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+/*inicial*/
+.inicial{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 20px 20px 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:990px;
+    background: rgba(0,0,0,0.5);
+}
+.inicial img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	width: 70px;
+	float:left;
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+    margin-left:auto;
+	margin-right:auto;
+}
+.inicial div{
+font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.inicial h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.inicial h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+.inicial label{
+    display: block; /* esto es para que el label se sobreponga a la caja de texto */
+    font-weight: bold;
+}
+.inicial div{
+    margin-bottom: 15px; /* esto los separara un poco */
+}
+
+.inicial input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 300px; /* una longitud definida */
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.inicial input[type='text']:focus, .contacto textarea:focus{
+    outline: none; /* reset especifico para Chrome/Safari */
+    box-shadow:0 0 0 3px #dde9ec;
+}
+
+.inicial input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+.inicial input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+}
+.inicial input[type='submit']:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+
+
+/*listas*/
+.listas{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 20px 20px 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:990px;
+    background: rgba(0,0,0,0.5);
+}
+.listas img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+	float:left;
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.listas div{
+font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.listas h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.listas h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+.listas label{
+    display: block; /* esto es para que el label se sobreponga a la caja de texto */
+    font-weight: bold;
+}
+.listas div{
+    margin-bottom: 15px; /* esto los separara un poco */
+}
+
+.listas input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 300px; /* una longitud definida */
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.listas input[type='text']:focus, .contacto textarea:focus{
+    outline: none; /* reset especifico para Chrome/Safari */
+    box-shadow:0 0 0 3px #dde9ec;
+}
+
+.listas input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+.listas input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+}
+.listas input[type='submit']:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+
+/*formulario tyni*/
+.contacto{
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    padding: 45px 45px 45px;
+    margin-top: 20px;
+    background: #118E8E;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    resize: none;
+    height:auto;
+    width:750px;
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+    background: rgba(0,0,0,0.5);
+    margin-left:auto;
+	margin-right:auto;
+}
+.contacto img {
+	display: block;
+	border: 1px solid #CED5D7;
+	box-shadow:0 0 0 3px #dde9ec;
+	border-radius: 20px;
+	margin: 0 0 10px 0;
+	width: 70px;
+}
+.contacto div{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    color: #ccc;
+}
+.contacto h1
+{
+    font-size: 30px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+.contacto h3
+{
+    font-size: 20px;
+    font-family: "Homer Simpson", cursive; 
+    text-shadow: 1px 1px #666, 2px 2px #86D6D3, 3px 3px #666, 4px 4px #86D6D3;
+   color: #ccc;
+}
+.contacto label{
+    display: block; /* esto es para que el label se sobreponga a la caja de texto */
+    font-weight: bold;
+}
+.contacto div{
+    margin-bottom: 15px; /* esto los separara un poco */
+}
+
+.contacto input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 500px; /* una longitud definida */
+    border: 1px solid #CED5D7;
+    border-radius: 20px;
+    resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus{
+    outline: none; /* reset especifico para Chrome/Safari */
+    box-shadow:0 0 0 3px #dde9ec;
+}
+
+.contacto input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+.contacto input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+}
+.contacto input[type='submit']:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+/*articulos*/
+
+.square {
+	display: block;
+	padding: 5px;
+	width: 600px;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+.square img {
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px;
+-moz-box-shadow:0px 0px 2px #000000;
+-webkit-box-shadow:0px 0px 2px #000000;
+box-shadow:0px 0px 2px #000000;
+-moz-transition: all 400ms linear 0s;
+}
+.square p {
+	float: right;
+	width: 450px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 20px;
+	color: #444444;
+	font-weight: normal;
+	text-shadow: 1px -1px #fff;
+	background-color: #EEEEEE;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	-moz-box-shadow:0px 0px 4px #000000;
+	-webkit-box-shadow:0px 0px 4px #000000;
+	box-shadow:0px 0px 4px #000000;
+	padding: 5px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+
+}
+.square h3 {
+	margin-bottom: 10px;
+	text-align: left;
+	font-family: serif;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	color: #770000;
+	text-shadow: 1px 1px #ccc;
+}
+aside {
+	width: 300px;
+	margin-top: 15px;
+	float: right;
+	display: block;
+	line-height: 20px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111111;
+	text-shadow: 1px -1px #FAFAFA;
+}
+/*----------------------------------------
+para el login
+-----------------------------------------*/
+#registration {
+	color: #fff;
+    background: #2d2d2d;
+    background: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, rgb(60,60,60)),
+                    color-stop(0.74, rgb(43,43,43)),
+                    color-stop(1, rgb(60,60,60))
+                );
+    background: -moz-linear-gradient(
+                    center bottom,
+                    rgb(60,60,60) 0%,
+                    rgb(43,43,43) 74%,
+                    rgb(60,60,60) 100%
+                );
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+	border-radius: 10px;
+    margin: 10px;
+	width: 700px;
+	padding:10px 10px 10px;
+	background: rgba(0,0,0,0.5);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+ #registration a {
+      color: #8c910b;
+      text-shadow: 0px -1px 0px #000;
+      }
+	  
+#registration fieldset 
+{
+      padding: 20px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 20px;
+      border:solid 1px #444;
+      color:#007FAA;
+      font-size:20px;
+      }
+.text {
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 20px;
+      border:solid 1px #444;
+      font-size: 20px;
+      width:90%;
+      padding: 7px 8px 7px 30px;
+      -moz-box-shadow: 0px 1px 0px #777;
+      -webkit-box-shadow: 0px 1px 0px #777;
+	  color:#333;
+      text-shadow:0px 1px 0px #FFF;
+}	 
+#email { 
+ 	background-position: 4px 5px; 
+	background-position: 4px 5px, 0px 0px;
+	}
+	
+#password { 
+ 	background-position: 4px -20px; 
+	background-position: 4px -20px, 0px 0px;
+	}
+	
+#name { 
+ 	background-position: 4px -46px; 
+	background-position: 4px -46px, 0px 0px; 
+	}
+	
+#tel { 
+ 	background-position: 4px -76px; 
+	background-position: 4px -76px, 0px 0px; 
+	}
+
+#registration h2 {
+	color: #fff;
+	text-shadow: 0px -1px 0px #000;
+	border-bottom: solid #181818 1px;
+	-moz-box-shadow: 0px 1px 0px #3a3a3a;
+	text-align: center;
+	padding: 18px;
+	margin: 0px;
+	font-weight: normal;
+	font-size: 24px;
+	font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+	}
+
+#registerNew {
+	width: 203px;
+	height: 40px;
+	border: none;
+	text-indent: -9999px;
+	background: url(../images/img/createAccountButton.png) no-repeat;
+	cursor: pointer;
+	float: right;
+	}
+	
+	#registerNew:hover { background-position: 0px -41px; }
+	#registerNew:active { background-position: 0px -82px; }
+	
+ #registration p {
+      position: relative;
+      }
+	  
+fieldset label.infield /* .infield label added by JS */ {
+    color: #333;
+    text-shadow: 0px 1px 0px #fff;
+    position: absolute;
+    text-align: left;
+    top: 3px !important;
+    left: 35px !important;
+    line-height: 29px;
+    }

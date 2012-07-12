@@ -1,0 +1,96 @@
+﻿@model proyect.Models.Comentario
+@{
+    ViewBag.Title = "Vcurso";
+}
+<div id="content">
+    <h1 align="center">CURSOS</h1>
+    <div class="contacto">
+    <h2> CATEGORIAS:
+        @foreach (var cc in @ViewBag.c)
+        {
+            @cc.nombre  
+        }</h2>
+        @foreach (var item in @ViewBag.cur)
+        {     
+            <h1 align="center">@item.titulo</h1>  
+            <li>
+            @*<a href="Vcurso.cshtml">Vcurso.cshtml</a>*@
+            <div class="actividad">
+                <h3>Publicado por: @item.nombre </h3>
+                @foreach (var a in item.ava)
+                {
+                    <img src='@a.rutavirtual' alt="@a.rutavirtual" height="50" width="50"/> 
+                }
+                @foreach (var p in item.perf)
+                {
+                     @p.nombre 
+                     @p.apellido<br />
+                     @p.intereses<br />
+                }
+                <br />
+                cantidad de articulos: @ViewBag.ca<br/>
+                cantidad de libros: @ViewBag.cl <br/>
+                cantidad de tutoriales:@ViewBag.ct <br/>
+                cantidad de cursos @ViewBag.cc<br/>
+                Puntale: @item.puntaje<br />
+                @Html.ActionLink("ULTIMOS APORTES", "Aportes", new { id = @item.idPublicacion})
+            </div>
+            Fecha: @item.fecha
+            @foreach (var archivos in item.archivo)
+            {
+                <img src='@archivos.rutavirtual' alt="@archivos.rutavirtual" height="70" width="70"/> 
+            }
+            <h3>Detalle: </h3>@Html.Raw(@item.detalle)
+            </li><br/>
+        }
+        @*@if (@ViewBag.estado == 1)
+        {
+            @Html.ActionLink("ya no me gusta", "megusta", new { id = @ViewBag.id }) 
+        }
+        else
+        {
+             @Html.ActionLink("me gusta", "megusta", new { id = @ViewBag.id }) 
+        }
+        *@
+        <br /><br />
+        <br />
+        <h2>Comentarios(@ViewBag.cantidadc)</h2>
+        <hr />
+        @foreach (var coments in @ViewBag.todos)
+        {
+            <div class="coment">
+            @foreach (var a in coments.ava)
+            {
+                if (@a.rutavirtual == null)
+                { 
+                   <img src='/Imagenes/noavatar.jpg' alt="/Imagenes/noavatar.jpg" height="60" width="50"/>
+                }
+                else
+                {
+                   <img src='@a.rutavirtual' alt="@a.rutavirtual" height="60" width="50"/> 
+                }
+            }
+            &nbsp @coments.nick <br/>
+            &nbsp PUNTALE: @coments.puntaje  <br /><br /><br />
+            @coments.Descripcion
+            <h3 align="right">FECHA: @coments.fecha </h3>   
+            </div>
+        }
+        @using (Html.BeginForm("Comentar", "Home"))
+        { 
+            <legend>Ingresa tu Comentario</legend>
+                @Html.ValidationSummary(true)
+                @Html.Hidden("id", (int)@ViewBag.id)
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Descripcion)
+                </div>
+                <div class="editor-field">
+                    @Html.TextAreaFor(model => model.Descripcion)
+                    @Html.ValidationMessageFor(model => model.Descripcion)
+            </div>
+            <p>
+                <input type="submit" value="Comentar"/>
+            </p> 
+        }
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿@model proyect.Models.comentario
+@{
+    ViewBag.Title = "Index";
+}
+<div id="content">
+    <h1 align="center">MODERACION DE COMENTARIOS</h1>
+    <div class="contacto">
+    @foreach (var item in @ViewBag.lista)
+    {
+        <li>
+        <h3>IDCOMENTARIO: @item.idComentario</h3>
+        <h3>PUBLICADO POR @item.nick</h3>
+        <h3>DESCRIPCION: @item.Descripcion</h3>
+        <h3>FECHA: @item.fecha</h3>
+        </li> 
+        <li>@Html.ActionLink("Borrar", "BorrarComentario", new { id=item.idComentario})</li>
+        <hr />
+    }
+    </div>
+</div>

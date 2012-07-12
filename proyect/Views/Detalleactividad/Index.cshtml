@@ -1,0 +1,72 @@
+﻿<div id="content">
+  <h1 align="center">DETALLE DE ACTIVIDAD</h1>
+  <div class="contacto">
+     PUNTUACION TOTAL ES: @ViewBag.l
+     <h1 align="center">ARTICULOS</h1>
+     <div class="moderador">
+     @foreach (var item in @ViewBag.listaarticulo)
+     {
+        <li>
+            Categorias:
+            @foreach (var s in @item.categoria)
+            {
+                @s.nombre <a>,</a>
+            } <br />
+            Publicado por: @item.nombre<br/>
+            Titulo: @item.titulo<br/>
+            puntuacion: @item.puntuacion
+        </li><hr/>   
+        }
+        </div>
+        <h1 align="center">TUTORIALES</h1>
+     <div class="moderador">
+         @foreach (var itemt in @ViewBag.listatutorial)
+         {     
+             <div class="public">     
+                <h3>@Html.ActionLink("Leer mas..", "VTutorial", new { id = itemt.idPublicacion })  </h3>
+                   <h3>Publicado por: </h3><h2>@itemt.nombre</h2>
+                   @foreach (var ss in @itemt.archivo)
+                   {
+                         <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+          
+                   } 
+                   <h3>Detalle:</h3><h2> @Html.Raw(@itemt.detalle)</h2>
+            </div><hr />
+         }
+     </div>
+     <h1 align="center">CURSOS</h1>
+     <div class="moderador">
+         @foreach (var itemcur in @ViewBag.listacurso)
+         {     
+             <div class="public">     
+                <h3>@Html.ActionLink("Leer mas..", "Vcurso", new { id = itemcur.idPublicacion }) </h3>
+                    <h3>Publicado por: </h3><h2>@itemcur.nombre</h2>
+                    <h3>Titulo: </h3><h2>@itemcur.titulo</h2>
+                    @foreach (var ss in @itemcur.archivo)
+                    {
+                            <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+          
+                    } 
+                    <h3>Detalle:</h3><h2> @Html.Raw(@itemcur.detalle)</h2>
+            </div>
+         }
+     </div>
+     <h1 align="center">LIBROS</h1>
+     <div class="moderador">
+         @foreach (var itemlib in @ViewBag.listalibro)
+         {     
+             
+                <h3>@Html.ActionLink("Leer mas..", "Vlibro", new { id = itemlib.idPublicacion }) </h3>
+                <h3>Publicado por:</h3><h2> @itemlib.nombre</h2>
+                <h3>Titulo:</h3><h2> @itemlib.titulo</h2>
+                <h3>Descripcion:</h3><h2> @itemlib.descripcion</h2>
+                foreach (var ss in @itemlib.archivo)
+                {
+                     <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+                } 
+         <hr />   
+         }
+     </div>
+
+     </div>
+</div>

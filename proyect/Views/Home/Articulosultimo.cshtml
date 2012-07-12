@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Articulosultimo";
+}
+
+<h2>Articulos recientes</h2>
+<h1 align="center">ARTICULOS</h1>    
+    <div class="inicial">   
+        @foreach (var item in @ViewBag.listaarticulo)
+        {  
+            <div class="public">     
+                @foreach (var ss in @item.archivo)
+                {
+                    <div>
+                        <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="250" width="300"/> 
+                    </div>
+                }
+                <h2>Categorias: &nbsp&nbsp 
+                @foreach (var s in @item.categoria)
+                {
+                    @s.nombre<a>,</a>
+                }
+                </h2>
+                <h2>Publicado por: &nbsp&nbsp @item.nombre</h2>
+                <h2>Titulo: &nbsp&nbsp @item.titulo</h2>
+                <h2>@Html.Raw(@item.detalle)</h2>
+                <h2 align="right">@Html.ActionLink("LEER MAS....", "Varticulo", new { id = item.idPublicacion })   </h2>
+            </div>
+        }
+     </div>
+       

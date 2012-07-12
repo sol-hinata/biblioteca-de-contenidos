@@ -1,0 +1,39 @@
+﻿@model proyect.Models.Curso
+@{
+    ViewBag.Title = "Curso";
+}
+<div id="content">
+    <h1 class="cursivebig" align="center">CREAR CURSO </h1>
+    <div class="contacto">
+            @using (Html.BeginForm("Curso", "Publicacion", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
+            @Html.ValidationSummary(true)
+            <h3> &#10004 INGRESAR DATOS DEL CURSO </h3>
+            <div>subir imagen del curso</div>
+            <input name="cursoFile" type="file"/>
+            <div class="editor-label">
+            @Html.LabelFor(model => model.titulo)
+            </div>
+            <div class="editor-field">
+            @Html.EditorFor(model => model.titulo)
+            @Html.ValidationMessageFor(model => model.titulo)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.nombrecate)
+            </div>
+            <div class="editor-label">
+                @Html.TextBoxFor(model => model.nombrecate)
+                @Html.ValidationMessageFor(model => model.nombrecate)
+            </div>
+            <div class="editor-label">
+            @Html.LabelFor(model => model.detalle)
+            </div>
+            <div class="editor-field">
+            @Html.EditorFor(model => model.detalle)
+            @Html.ValidationMessageFor(model => model.detalle)
+            </div>
+            <p>
+            <input type="submit" value="Enviar"/>
+            </p>
+            }
+    </div>
+</div>

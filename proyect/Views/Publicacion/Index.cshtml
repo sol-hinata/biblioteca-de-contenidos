@@ -1,0 +1,117 @@
+﻿@model proyect.Models.Articulo
+@{
+    ViewBag.Title = "Publicacion";
+}
+@*
+<script src="@Url.Content("~/Content/js/slider.js")" type="text/javascript" charset="utf-8"></script>
+<div id="content">
+    <div id="slider">    
+        <img class="scrollButtons left" src="@Url.Content("~/Content/images/leftarrow.png")">
+  	        <div style="overflow: hidden;" class="scroll">
+	        	<div class="scrollContainer">
+	                <div class="panel" id="panel_1">
+						<div class="inside">
+							<img src="@Url.Content("~/Content/images/p1.jpg")" alt="picture" />
+							<p>Resumen del articulo<a href="../Home/Index">Ver Mas</a></p>
+						</div>
+					</div>
+                    <div class="panel" id="panel_2">
+					    <div class="inside">
+							<img src="@Url.Content("~/Content/images/p2.jpg")" alt="picture" />
+							<p>Resumen del articulo<a href="#">Ver Mas</a></p>
+						</div>
+					</div>
+				    <div class="panel" id="panel_3">
+						<div class="inside">
+							<img src="@Url.Content("~/Content/images/p3.jpg")" alt="picture" />
+							<p>Resumen del articulo<a href="#">Ver Mas</a></p>
+						</div>
+					</div>
+					<div class="panel" id="panel_4">
+						<div class="inside">
+							<img src="@Url.Content("~/Content/images/p4.jpg")" alt="picture" />
+							<p>Resumen del articulo<a href="#">Ver Mas</a></p>
+						</div>
+					</div>
+					<div class="panel" id="panel_5">
+						<div class="inside">
+							<img src="@Url.Content("~/Content/images/p5.jpg")" alt="picture" />
+							<p>Resumen del articulo<a href="#">Ver Mas</a></p>
+						</div>
+					</div>
+	            </div>
+				<div id="left-shadow"></div>
+				<div id="right-shadow"></div>
+           </div>
+    	   <img class="scrollButtons right" src="@Url.Content("~/Content/images/rightarrow.png")">
+     </div>
+     <nav>
+        <div class="divider"></div>
+      </nav>    
+</div>
+<div class="sidebar">
+        <ul>	
+            <form>
+                <input id="name" name="name" placeholder="Q? Buscar" required="" tabindex="1" type="text"></br>
+                <input name="submit" id="submit" tabindex="5" value="Buscar" type="submit">
+            </form>
+            <div id="demoA">
+              <a onclick="demoacordeon('primero');" href="javascript:void(0);">DESCRIPCION DE LA PAGINA</a>
+              <div id="primero" class="visible">
+                <p>Sistema web que sirve para el Intercambio general de conocimientos, plasmados en artículos, Tutoriales, Cursos y libros, además permite que cualquier usuario pueda preguntar sus inquietudes plasmadas en forma de pregunta y que se dé la libertad de que cualquier usuario pueda responder, a cambio de un puntaje virtual que servirá como indicador del nivel y jerarquía del usuario.</p>
+              </div>
+              <a onclick="demoacordeon('segundo');" href="javascript:void(0);">CATEGORIAS</a>
+              <div id="segundo" class="novisible">
+                <ul>
+                	<a href="page.html">Static Text Page</a>
+                    <a href="#">A sub Link</a>
+                    <a href="#">Another link</a>
+                </ul>
+              </div>
+              <a onclick="demoacordeon('tercero');" href="javascript:void(0);">BIENVENIDOS A NUESTRO BLOG</a>
+              <div id="tercero" class="novisible">      
+                    
+              </div>
+              <a onclick="demoacordeon('cuarto');" href="javascript:void(0);">PREGUNTAS FRECUENTES</a>
+              <div id="cuarto" class="novisible">      
+                <p> ....... el contenido ....... </p>
+              </div>
+            </div>
+        </ul> 
+    </div>
+    <div class="clear"></div>
+    <script>
+//<![CDATA[
+        var abierto = "primero"; // definimos el que estará abierto
+        function demoacordeon(cual) {
+            var mostrar = document.getElementById(cual); // el que vamos a mostrar
+            var actual = document.getElementById(abierto); // el que vamos a ocultar
+            if (mostrar == actual) { return false; } // si es el mismo no hacemos nada
+            // permutamos sus clases
+            actual.className = "novisible";
+            mostrar.className = "visible";
+            abierto = cual; // guardamos el que está abierto
+        }
+//]]>
+</script>*@
+<div class="container">
+    <h1>Lista de Articulos</h1>
+    <div id="slider">
+        <div class="container">
+            <ul class="slides">
+            @foreach (var item in @ViewBag.lista)
+            { 
+                <li>
+                    <div class="thumbholder"><img src="@Url.Content("~/Content/images/f7.png")" width="350" height="220" alt="I Mac Immagine Disegno" /></div>
+                    <div class="txtholder">
+                        <h3>@item.titulo</h3>
+                        <h3>@Html.Raw(@item.detalle)</h3>
+                         <h3>@item.nombre  @Html.ActionLink("COMENTAR", "Comentar", "Publicacion", new { item.idPublicacion})</h3>
+                         
+                    </div>
+                </li>
+            }
+            </ul>
+         </div>
+    </div>
+</div>

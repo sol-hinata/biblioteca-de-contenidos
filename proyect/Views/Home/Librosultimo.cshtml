@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Librosultimo";
+}
+
+<h2>Libros recientes</h2>
+ <h1 align="center">LIBROS</h1>
+     <div class="perfil">
+         @foreach (var itemlib in @ViewBag.listalibro)
+         {     
+             <div class="public">
+                <h3>@Html.ActionLink("Leer mas..", "Vlibro", new { id = itemlib.idPublicacion }) </h3>
+                <h3>Publicado por:</h3><h2> @itemlib.nombre</h2>
+                <h3>Titulo:</h3><h2> @itemlib.titulo</h2>
+                <h3>Descripcion:</h3><h2> @itemlib.descripcion</h2>
+                @foreach (var ss in @itemlib.archivo)
+                {
+                     <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+                } 
+            </div>
+         }
+     </div>
+  

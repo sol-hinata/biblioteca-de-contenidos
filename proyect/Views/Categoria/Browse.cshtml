@@ -1,0 +1,10 @@
+﻿@model IEnumerable<proyect.Models.Categoria>
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Categoria:</h2>
+<ul>@foreach(var publi in Model){
+        <li>@Html.ActionLink(publi.nombre,"Detalles",new {id=publi.idCategoria})</li>
+    }</ul>

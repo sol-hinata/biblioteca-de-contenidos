@@ -1,0 +1,15 @@
+﻿@model proyect.Models.Articulo
+
+@{
+    ViewBag.Title = "getCategoria";
+}
+
+<h2>getCategoria</h2>
+
+<h2>TITULO articulo : @ViewBag.c.titulo</h2>
+ <h1>
+    @foreach (var l in @ViewBag.c.categorialista) 
+       {
+            <h3>NOMBRE CATEGORIA: @l.nombre<br/></h3>
+       }
+ </h1>

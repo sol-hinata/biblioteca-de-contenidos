@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Reporte";
+}
+<div id="content">
+    <h1 align="center">REPORTE DE USUARIOS</h1>
+    <div class="contacto">
+    <h2 align="center">USUARIOS ACTIVOS</h2>
+ @foreach (var u in @ViewBag.usu)
+  { <li>
+    nick: @u.nombre    <br/>
+   Email: @u.Email   <br/>
+   Rol:  @u.r @u. <br/>
+   Fecha de creacion:   @u.CreateDate <br/>
+   Fecha Ultima Actividad   @u.fechau  <br/>
+    </li>
+    @Html.ActionLink("Detalles", "DetalleUsuario", new { idn = u.nombre }) <br/>  
+     <hr />
+ }
+ <h2 align="center">USUARIOS BANEADOS</h2>
+
+ @foreach (var t in @ViewBag.usuv)
+ {
+ <li>
+       nick:  @t.nombre    <br/>
+     Email:   @t.Email   <br/>
+     Rol: @t.r  <br/>
+     Fecha Creacion: @t.CreateDate <br/>
+        Fecha Ulima Actividad: @t.fechau </li><br/>
+     
+    @Html.ActionLink("Detalles", "DetalleUsuario", new { idn = t.nombre }) <br/>  
+     <hr />
+  }
+</div>
+</div>

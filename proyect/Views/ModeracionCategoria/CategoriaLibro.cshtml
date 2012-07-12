@@ -1,0 +1,40 @@
+﻿@model proyect.Models.Categoria
+@{
+    ViewBag.Title = "CategoriaLibro";
+}
+<div class="container">
+    <div class="contacto">
+    <h1>Modificar Categoria de Libro</h1>
+         <li>
+               <h3>Titulo: @ViewBag.infoa.titulo </h3>
+               <h3>Autor: @ViewBag.infoa.fecha</h3>  
+               <h3>Año de publicacion: @ViewBag.infoa.Annio_pub</h3>  
+               <h3>Fecha: @ViewBag.infoa.fecha</h3>  
+               <h3>Detalle: @ViewBag.infoa.detalle </h3>
+                 
+         </li>
+      <li>
+     @foreach (var categoria in @ViewBag.cat)
+         {
+           <h3>Id: @categoria.idCategoria</h3>
+           <h3>Nombre: @categoria.nombre </h3> 
+         }
+    </li>
+    <h3>Id: @ViewBag.idc</h3>
+     @using (Html.BeginForm()) 
+     { 
+       @Html.ValidationSummary(true)
+        @Html.Hidden("idc", (int)@ViewBag.idc)
+      <div class="editor-label">
+      @Html.LabelFor(model => model.nombre)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.nombre)
+        @Html.ValidationMessageFor(model => model.nombre)
+    </div>
+    <p>
+        <input type="submit" value="Actualizar"/>
+    </p>
+    }
+    </div>
+    </div>

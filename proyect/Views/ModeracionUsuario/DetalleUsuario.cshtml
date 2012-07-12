@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "DetalleUsuario";
+}
+<div id="content">
+    <h1 align="center">DETALLE DE LOS USUARIOS</h1>
+    <div class="contacto">
+        @ViewBag.idn
+        @foreach(var u in @ViewBag.us ){
+            @u.nom    
+            foreach (var a in u.ava)
+            {
+                  <img src='@a.rutavirtual' alt="@a.rutavirtual" height="50" width="50"/> 
+            }
+            @u.puntaje<br/>
+            foreach (var d in u.per)
+            {
+                @d.nombre
+                @d.apellido
+                @d.apellidom
+                @d.ubicacion
+                @d.intereses    
+            }
+        }
+        CANTIDAD DE ARTICULOS: @ViewBag.ca<br />
+        CANTIDAD DE LIBROS: @ViewBag.cl<br />
+        CANTIDAD DE TUTORIAL: @ViewBag.ct<br />
+        CANTIDAD DE CURSOS: @ViewBag.cc<br />
+        CANTIDAD DE COMENTARIOS HECHOS: @ViewBag.cantcom<br />
+        CANTIDAD DE INFRACCIONES:<br />
+         @Html.ActionLink("Vanear Usuario", "VanearUsuario", new { idn = @ViewBag.idn }) <br/>  
+    </div>
+ </div>
+ <div class="sidebar">
+        <ul>	
+            <form>
+                <input id="name" name="name" placeholder="Q? Buscar" required="" tabindex="1" type="text"></br>
+                <input name="submit" id="submit" tabindex="5" value="Buscar" type="submit">
+            </form>
+            <div id="demoA">
+                <a onclick="demoacordeon('primero');" href="javascript:void(0);">MODERADOR DE USUARIOS</a>
+                <div id="activo" class="visible">
+                    @Html.ActionLink("LISTAR USUARIOS", "ListarUsuario")
+                    @Html.ActionLink("BUSCAR USUARIO", "BuscarUsuario")  
+                    @Html.ActionLink("REPORTE DE USUARIOS ", "Reporte")  
+                    @Html.ActionLink("LISTA BANEADOS ", "listaBaneados")  
+                </div>
+                <a onclick="demoacordeon('segundo');" href="javascript:void(0);">CATEGORIAS</a>
+                <div id="segundo" class="novisible">
+                    <ul>
+                	    <a href="page.html">Static Text Page</a>
+                        <a href="#">A sub Link</a>
+                        <a href="#">Another link</a>
+                    </ul>
+                </div>
+                <a onclick="demoacordeon('tercero');" href="javascript:void(0);">BIENVENIDOS A NUESTRO BLOG</a>
+                <div id="tercero" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+                <a onclick="demoacordeon('cuarto');" href="javascript:void(0);">PREGUNTAS FRECUENTES</a>
+                <div id="cuarto" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+            </div>
+        </ul> 
+    </div>
+    <div class="clear"></div>
+    
+

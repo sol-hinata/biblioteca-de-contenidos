@@ -1,0 +1,74 @@
+﻿@model proyect.Models.Libro
+@{
+    ViewBag.Title = "ReeditarLibro";
+}
+<div class="contacto">
+    <h1>ReeditarLibro</h1>
+    @using (Html.BeginForm("Libro", "Publicacion", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+    {  
+        @Html.ValidationSummary(true)
+        <legend>Publicar Libro</legend>
+        <h4>actualizar portada del libro:</h4><input name="uploadFile" type="file"/><br/>
+        <h4>actualizar libro :</h4><input name="libroFile" type="file"/>   
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Autor)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Autor)
+            @Html.ValidationMessageFor(model => model.Autor)
+        </div>
+        <div class="editor-label">
+            @Html.Label("Anio de publicacion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(x => x.Annio_pub, new[] 
+                {
+                    new SelectListItem() {Text = "2000"},
+                    new SelectListItem() {Text = "2001"},
+                    new SelectListItem() {Text = "2002"},
+                    new SelectListItem() {Text = "2003"},
+                    new SelectListItem() {Text = "2004"},
+                    new SelectListItem() {Text = "2005"},
+                    new SelectListItem() {Text = "2006"},
+                    new SelectListItem() {Text = "2007"},
+                    new SelectListItem() {Text = "2008"},
+                    new SelectListItem() {Text = "2009"},
+                    new SelectListItem() {Text = "2010"},
+                    new SelectListItem() {Text = "2011"},
+                    new SelectListItem() {Text = "2012"}
+                }, "Elegir un Annio")
+                @Html.ValidationMessageFor(model => model.Annio_pub)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.titulo)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.titulo)
+                @Html.ValidationMessageFor(model => model.titulo)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.categoria)
+            </div>
+
+            <div class="editor-field">
+            @Html.DropDownListFor(x => x.categoria, new[] 
+            {
+                new SelectListItem() {Text = "Ingenieria", Value = bool.TrueString},
+                new SelectListItem() {Text = "Matematicas", Value = bool.FalseString}
+            }, "Elegir una Categoria")
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.detalle)
+            </div>
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.detalle)
+                @Html.ValidationMessageFor(model => model.detalle)
+            </div>
+            <p> 
+               <input type="submit" value="Subir Libro"/>
+            </p>
+           </fieldset>
+    }
+</div>

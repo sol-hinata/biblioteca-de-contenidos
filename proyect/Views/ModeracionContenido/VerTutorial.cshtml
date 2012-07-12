@@ -1,0 +1,71 @@
+﻿@model proyect.Models.Tutorial
+<div class="containercontent">
+@{
+    ViewBag.Title = "VerTutorial";
+}
+<div id="content">
+    <div class="perfil">
+        @Html.ActionLink("Volver", "Index", "ModeracionContenido")
+        <ul>  
+             @foreach (var item in @ViewBag.tutorial)
+             { 
+                 @item.nombre
+                 foreach (var ss in @item.archivo)
+                 {
+                    <img src='@ss.rutavirtual' alt="@ss.rutavirtual" height="60" width="50"/> 
+                 }
+                 <h1 class="cursive"> @item.titulo</h1>
+                 <div class="moderador">
+                     &nbsp @Html.Raw(@item.detalle)<br />
+                     <h3>&nbsp el: @item.fecha</h3>
+                     <br /><br />
+                     <h3 align="center"> @Html.ActionLink("Publicar", "PublicarTutorial", new { id = item.idPublicacion }) &nbsp&nbsp&nbsp&nbsp @Html.ActionLink("Rechazar", "Rechazar", new { id = item.idPublicacion })   </h3>
+                </div>
+             }       
+        </ul>
+    </div>
+</div>
+<div class="sidebar">
+        <ul>	
+            <div id="demoA">
+                <a onclick="demoacordeon('primero');" href="javascript:void(0);">MODERADOS DE CONTENIDO</a>
+                <div id="primero" class="visible">
+                    @Html.ActionLink("ARTICULOS", "VerArticulos")
+                    @Html.ActionLink("LIBROS", "VerLibros")  
+                    @Html.ActionLink("TUTORIAL", "VerTutoriales")   
+                    @Html.ActionLink("CURSO", "VerCursos")
+                </div>
+                <a onclick="demoacordeon('segundo');" href="javascript:void(0);">CATEGORIAS</a>
+                <div id="segundo" class="novisible">
+                    <ul>
+                	    <a href="page.html">Static Text Page</a>
+                        <a href="#">A sub Link</a>
+                        <a href="#">Another link</a>
+                    </ul>
+                </div>
+                <a onclick="demoacordeon('tercero');" href="javascript:void(0);">BIENVENIDOS A NUESTRO BLOG</a>
+                <div id="tercero" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+                <a onclick="demoacordeon('cuarto');" href="javascript:void(0);">PREGUNTAS FRECUENTES</a>
+                <div id="cuarto" class="novisible">      
+                    <p> ....... el contenido ....... </p>
+                </div>
+            </div>
+        </ul> 
+    </div>
+    <div class="clear"></div>
+    <script>
+//<![CDATA[
+        var abierto = "primero"; // definimos el que estará abierto
+        function demoacordeon(cual) {
+            var mostrar = document.getElementById(cual); // el que vamos a mostrar
+            var actual = document.getElementById(abierto); // el que vamos a ocultar
+            if (mostrar == actual) { return false; } // si es el mismo no hacemos nada
+            // permutamos sus clases
+            actual.className = "novisible";
+            mostrar.className = "visible";
+            abierto = cual; // guardamos el que está abierto
+        }
+//]]>
+</script>  

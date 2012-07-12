@@ -1,0 +1,57 @@
+﻿ag.Title = "Aportes";
+}
+<div id="content">
+<h1 align="center">ARTICULOS</h1>    
+    <div class="inicial">   
+       
+            <div class="contacto">     
+                @foreach (var ss in ViewBag.a)
+                {
+                    
+                
+                <h2>Titulo: &nbsp&nbsp @ss.titulo</h2>
+                <h2 align="right">@Html.ActionLink("LEER MAS....", "Varticulo", new { id = ss.idPublicacion })   </h2>
+                }
+            
+                    </div>
+     </div>
+     <h1 align="center">TUTORIALES</h1>
+     <div class="inicial">
+     <div class="contacto">     
+                @foreach (var ss in ViewBag.t)
+                {
+                    
+                
+                <h2>Titulo: &nbsp&nbsp @ss.titulo</h2>
+                <h2 align="right">@Html.ActionLink("LEER MAS....", "Varticulo", new { id = ss.idPublicacion })   </h2>
+                }
+            
+                    </div>
+     </div>
+     <h1 align="center">CURSOS</h1>
+     <div class="inicial">
+        <div class="contacto">     
+                @foreach (var ss in ViewBag.c)
+                {
+                    
+                
+                <h2>Titulo: &nbsp&nbsp @ss.titulo</h2>
+                <h2 align="right">@Html.ActionLink("LEER MAS....", "Varticulo", new { id = ss.idPublicacion })   </h2>
+                }
+            
+                    </div>
+     </div>
+     <h1 align="center">LIBROS</h1>
+     <div class="inicial">
+        <div class="contacto">     
+                @foreach (var ss in ViewBag.l)
+                {
+                    
+                
+                <h2>Titulo: &nbsp&nbsp @ss.titulo</h2>
+                <h2 align="right">@Html.ActionLink("LEER MAS....", "Varticulo", new { id = ss.idPublicacion })   </h2>
+                }
+            
+                    </div>
+     </div>
+ </div>

@@ -1,0 +1,66 @@
+﻿@model proyect.Models.PerfilEdit
+@*<div class="containercontent">*@
+@{
+    ViewBag.Title = "Perfil";
+}
+<div id="content">
+    <h1 align="center">ACTUALIZAR PERFIL</h1>
+    <div class="contacto">
+        <h3> &#10004; ACTUALIZACION DE DATOS</h3>
+        @using (Html.BeginForm("SubirImg", "Editperfil", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+            <input name="uploadFile" type="file"/>
+            <input type="submit" value="subirImagen"/>
+            </div>
+        }
+        @if (@ViewBag.listaimg == null)
+        { 
+            <ul>    
+                <img src='/Imagenes/noavatar.jpg' alt="/Imagenes/noavatar.jpg" height="70" width="60"/>
+            </ul>
+        }
+        else
+        {
+            <ul>
+                <img src='@ViewBag.listaimg.rutavirtual' alt="@ViewBag.listaimg.rutavirtual" height="70" width="60"/>
+            </ul>
+        }
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(m => m.nombre)
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.nombre)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.apellido)
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.apellido)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.apellidom)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.apellidom)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.interes)
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.interes)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.ubicacion)
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.ubicacion)
+            </div>
+            <div>
+                <input type="submit" value="Guardar"/>
+            </div>
+        }
+        </div>
+</div>
